@@ -1,8 +1,40 @@
-body {
-  padding: 50px;
+/* body {
+  padding: 0;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+ */
+
+.character-overview {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 175px auto auto auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "ability-scores . . sidebar";
+}
+
+.ability-scores {
+  grid-area: ability-scores;
+  display: grid;
+  grid-row-gap: 20px;
+  height: 100%;
+  align-items: stretch;
+}
+
+.ability-scores > div {
+  text-align: center;
+  border: 1px solid var(--siimple-grey-0);
+  border-radius: 2px;
+  background-color: var(--siimple-white);
+  box-shadow: 0 0 4px 0px var(--siimple-grey-0);
+}
+
+.ability-scores > div > h5:last-child {
+  margin-bottom: 0;
 }
