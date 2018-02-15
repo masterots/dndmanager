@@ -1,5 +1,29 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .character-overview
+    .ability-scores
+      .strength
+        h5.title Strength
+        h5.score 12&nbsp;
+          strong (0)
+      .dexterity
+        h5.title Dexterity
+        h5.score 13&nbsp;
+          strong (+1)
+      .constitution
+        h5.title Constitution
+        h5.score 12&nbsp;
+          strong (0)
+      .intelligence
+        h5.title Intelligence
+        h5.score 9&nbsp;
+          strong (-1)
+      .wisdom
+        h5.title Wisdom
+        h5.score 11&nbsp;
+          strong (0)
+      .charisma
+        h5.title Charisma
+        h5.score 12&nbsp;
+          strong (0)
