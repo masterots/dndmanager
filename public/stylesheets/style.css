@@ -1,64 +1,60 @@
-/* body {
-  padding: 0;
-  margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
- */
-
 .character-overview {
-  margin: 20px;
+  padding: 20px;
   display: grid;
-  grid-template-columns: 175px auto auto auto;
+  grid-template-columns: 175px repeat(3, [col] 1fr);
+  grid-template-rows: repeat(6, [row] auto);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header header header header"
-    "ability-scores current-user-info auto auto";
+}
+
+.card {
+  text-align: center;
+  border: 1px solid var(--siimple-grey-0);
+  border-radius: 2px;
+  background-color: var(--siimple-white);
+  box-shadow: 0 0 4px 0px var(--siimple-grey-0);
+}
+
+.card > div > h5:last-child {
+  margin-bottom: 0;
 }
 
 .current-user-info {
-  grid-area: current-user-info;
+  grid-column: 2;
+  grid-row: 1 / span 2;
   display: grid;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 100px;
-  grid-template-areas:
-    /* "armor-class initiative speed", */
-    "hit-points hit-points hit-points"
+  grid-template-columns: repeat(3, [col] 1fr);
+  grid-template-rows: repeat(2, [row] auto);
 }
 
 .hit-points {
-  grid-area: hit-points;
-  text-align: center;
-  border: 1px solid var(--siimple-grey-0);
-  border-radius: 2px;
-  background-color: var(--siimple-white);
-  box-shadow: 0 0 4px 0px var(--siimple-grey-0);
+  grid-column: 1 / span 3;
+  grid-row: 2;
 }
 
-.ability-scores {
-  grid-area: ability-scores;
-  display: grid;
-  grid-row-gap: 20px;
-  grid-auto-rows: 100px;
-  height: 100%;
-  align-items: stretch;
+.strength {
+  grid-column: 1;
+  grid-row: 1;
 }
-
-.ability-scores > div {
-  text-align: center;
-  border: 1px solid var(--siimple-grey-0);
-  border-radius: 2px;
-  background-color: var(--siimple-white);
-  box-shadow: 0 0 4px 0px var(--siimple-grey-0);
+.dexterity {
+  grid-column: 1;
+  grid-row: 2;
 }
-
-.ability-scores > div > h5:last-child {
-  margin-bottom: 0;
+.constitution {
+  grid-column: 1;
+  grid-row: 3;
+}
+.intelligence {
+  grid-column: 1;
+  grid-row: 4;
+}
+.wisdom {
+  grid-column: 1;
+  grid-row: 5;
+}
+.charisma {
+  grid-column: 1;
+  grid-row: 6;
 }

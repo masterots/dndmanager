@@ -3,31 +3,39 @@ extends layout
 block content
   .character-overview
     .current-user-info
-      .hit-points
+      .card.armor-class
+        h5.title Armor Class
+        h5.value 12
+      .card.initiative
+        h5.title Initiative
+        h5.value -
+      .card.speed
+        h5.title Speed
+        h5.value 30
+      .card.hit-points
         h5.title Hit Points
         h5.value 13/13
-    .ability-scores
-      .strength
-        h5.title Strength
-        h5.score 12&nbsp;
-          strong (0)
-      .dexterity
-        h5.title Dexterity
-        h5.score 13&nbsp;
-          strong (+1)
-      .constitution
-        h5.title Constitution
-        h5.score 12&nbsp;
-          strong (0)
-      .intelligence
-        h5.title Intelligence
-        h5.score 9&nbsp;
-          strong (-1)
-      .wisdom
-        h5.title Wisdom
-        h5.score 11&nbsp;
-          strong (0)
-      .charisma
-        h5.title Charisma
-        h5.score 12&nbsp;
-          strong (0)
+    .card.ability-score.strength
+      h5.title Strength
+      h5.score 12&nbsp;
+        strong (0)
+    .card.ability-score.dexterity
+      h5.title Dexterity
+      h5.score 13&nbsp;
+        strong (+1)
+    .card.ability-score.constitution
+      h5.title Constitution
+      h5.score 12&nbsp;
+        strong (0)
+    .card.ability-score.intelligence
+      h5.title Intelligence
+      h5.score 9&nbsp;
+        strong (-1)
+    .card.ability-score.wisdom
+      h5.title Wisdom
+      h5.score 11&nbsp;
+        strong (0)
+    .card.ability-score.charisma
+      h5.title Charisma
+      h5.score 12&nbsp;
+        strong (0)
